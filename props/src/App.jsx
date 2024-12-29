@@ -1,22 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import UserCard from "./UserCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-      
-      </div>
-      <div className="card">
-        <p>
-        </p>
-      </div>
-    </>
-  )
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <UserCard name="John Doe" age={30} occupation="Software Engineer" />
+      <UserCard name="Jane Smith" age={25} occupation="Product Manager" />
+      <UserCard name="Alice Johnson" age={35} occupation="Designer" />
+    </div>
+  );
 }
 
-export default App
+export default App;
