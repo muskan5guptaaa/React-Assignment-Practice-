@@ -8,9 +8,8 @@ const Login = () => {
     setIsLoggedIn(true);  // Update state to logged in
   };
 
-  // Function to handle Logout
   const handleLogout = () => {
-    setIsLoggedIn(false);  // Update state to logged out
+    setIsLoggedIn(false); 
   };
 
   return (
