@@ -1,11 +1,11 @@
 import React from "react";
-import Login from "./Login";
+import Counter from "./counter";
 
 function App() {
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "20px" }}>Conditional Rendering Example</h1>
-      <Login />
+<Counter/>
     </div>
   );
 }
