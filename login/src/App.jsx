@@ -1,11 +1,10 @@
 import React from "react";
-import Counter from "./counter";
+import Timer from "./timer";
 
 function App() {
   return (
     <div>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>Conditional Rendering Example</h1>
-<Counter/>
+   <Timer/>
     </div>
   );
 }
