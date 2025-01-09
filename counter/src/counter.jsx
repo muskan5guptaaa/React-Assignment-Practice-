@@ -1,49 +1,44 @@
-// Counter.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  const increaseCount = () => setCount(count + 1);
-  const decreaseCount = () => setCount(count - 1);
+const Counter=()=>{
+  const[count,setCount]=useState(0);
+    const increment=()=>setCount(count+1);
+    const decrement=()=>setCount(count-1);
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.count}>{count}</h1>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Counter</h1>
+      <h2>Current Count: {count}</h2>
       <div>
-        <button style={styles.button} onClick={increaseCount}>Increase</button>
-        <button style={styles.button} onClick={decreaseCount}>Decrease</button>
+        <button
+          onClick={increment}
+          style={{
+            margin: "5px",
+            padding: "10px 20px",
+            backgroundColor: "green",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          Increase
+        </button>
+        <button
+          onClick={decrement}
+          style={{
+            margin: "5px",
+            padding: "10px 20px",
+            backgroundColor: "red",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          Decrease
+        </button>
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    textAlign: 'center',
-    margin: '50px auto',
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    maxWidth: '300px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    backgroundColor: '#f9f9f9',
-  },
-  count: {
-    fontSize: '2rem',
-    margin: '20px 0',
-  },
-  button: {
-    fontSize: '1rem',
-    padding: '10px 20px',
-    margin: '5px',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    backgroundColor: '#007BFF',
-    color: '#fff',
-    transition: 'background-color 0.3s',
-  },
 };
 
 export default Counter;

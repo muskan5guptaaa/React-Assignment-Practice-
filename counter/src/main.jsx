@@ -1,15 +1,13 @@
-// App.js
-import React from 'react';
-import Counter from './counter';
 
-const App = () => {
-  return (
-    <div>
-      <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Counter App</h1>
-      <Counter />
-      <App/>
-    </div>
-  );
-};
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import Counter from "./Counter";
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+   
+  </React.StrictMode>
+);
