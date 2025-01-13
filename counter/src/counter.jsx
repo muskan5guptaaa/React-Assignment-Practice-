@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 const Counter=()=>{
   const[count,setCount]=useState(0);
-    const increment=()=>setCount(count+1);
-    const decrement=()=>setCount(count-1);
+    
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
@@ -11,7 +10,9 @@ const Counter=()=>{
       <h2>Current Count: {count}</h2>
       <div>
         <button
-          onClick={increment}
+          onClick={()=>{
+            setCount(count+1);
+          }}
           style={{
             margin: "5px",
             padding: "10px 20px",
@@ -24,7 +25,9 @@ const Counter=()=>{
           Increase
         </button>
         <button
-          onClick={decrement}
+          onClick={()=>{
+            setCount(count-1);
+          }}
           style={{
             margin: "5px",
             padding: "10px 20px",
