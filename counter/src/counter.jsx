@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 
 const Counter=()=>{
   const[count,setCount]=useState(0);
-    
+
+ useEffect(() => {
+  console.log("User updated count:", count);
+}, [count]); // This will log the count every time it updates
+
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
