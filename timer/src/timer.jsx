@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react'; // Importing React and hooks
-import ReactDOM from 'react-dom'; // Importing ReactDOM for rendering the app
+import React, { useState, useEffect } from 'react'; 
+import ReactDOM from 'react-dom'; 
 
 function Timer() {
-  const [count, setCount] = useState(0); // State for count
-  const [calculation, setCalculation] = useState(0); // State for calculation result
+  const [count, setCount] = useState(0); 
+  const [calculation, setCalculation] = useState(0);
 
   // Effect hook to update the calculation when count changes
   useEffect(() => {
-    setCalculation(count * 2); // Set calculation based on count
+    setCalculation(count * 2); 
   }, [count]); // Trigger effect when count changes
 
   return (
     <>
       <p>Count: {count}</p>
-      <button onClick={() => setCount((c) => c + 1)}>+</button> {/* Increment count */}
-      <p>Calculation: {calculation}</p> {/* Display the result of calculation */}
+      <button onClick={() => setCount((c) => c + 1)}>+</button>
+      <p>Calculation: {calculation}</p> 
     </>
   );
 }
