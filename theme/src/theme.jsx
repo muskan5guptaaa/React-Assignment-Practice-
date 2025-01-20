@@ -5,8 +5,7 @@ function ThemeToggler() {
 
   useEffect(() => {
     document.title = `Theme: ${isDarkMode ? "Dark" : "Light"}`;
-  }, [isDarkMode]); // Runs only when `isDarkMode` changes.
-
+  }, [isDarkMode]); 
   return (
     <div style={{ backgroundColor: isDarkMode ? "#333" : "#fff", color: isDarkMode ? "#fff" : "#000" }}>
       <h1>{isDarkMode ? "Dark Mode" : "Light Mode"}</h1>
